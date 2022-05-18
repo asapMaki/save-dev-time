@@ -1,0 +1,17 @@
+query characters {
+  characters {
+    info {
+      count
+      pages
+      next
+    }
+    results {
+      gender
+      created
+      id
+      image
+      status
+      type
+    }
+  }
+}
