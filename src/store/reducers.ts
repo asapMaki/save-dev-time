@@ -1,9 +1,9 @@
 import {combineReducers} from '@reduxjs/toolkit';
 
-// import REPLACE from './REPLACE/slice';
+import characters from './characters/slice';
 
 const rootReducer = combineReducers({
-  // REPLACE
+  characters,
 });
 export default rootReducer;
 

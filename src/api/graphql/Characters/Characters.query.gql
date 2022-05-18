@@ -12,6 +12,7 @@ query characters {
       image
       status
       type
+      name
     }
   }
 }

@@ -217,6 +217,7 @@ export type CharactersQuery = {
       image?: string | null;
       status?: string | null;
       type?: string | null;
+      name?: string | null;
     } | null> | null;
   } | null;
 };
@@ -236,6 +237,7 @@ export const CharactersDocument = gql`
         image
         status
         type
+        name
       }
     }
   }

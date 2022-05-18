@@ -1,10 +1,11 @@
 module.exports = {
   api: {
-    input: './src/api/RickAndMorty.yml',
+    // input: './src/api/RickAndMorty.yml',
+    input: 'https://petstore.swagger.io/v2/swagger.json',
     output: {
       // target: './api/generated.ts',
       // schemas: './api/model',
-      target: './src/api',
+      target: './src/api/rest',
       mode: 'tags-split',
       mock: true,
       prettier: true,

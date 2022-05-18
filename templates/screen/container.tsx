@@ -6,7 +6,6 @@ import { useToast } from 'react-native-styled-toast'
 
 import <%= upCaseName %>Component from './<%= upCaseName %>.component';
 // import actions from 'store/actions';
-import {useAppSelector, useAppDispatch} from 'store/hooks';
 
 interface Props {
   navigation?: any;

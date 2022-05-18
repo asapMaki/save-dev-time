@@ -1,16 +1,17 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 // import {Platform, View} from 'react-native';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {AXIOS_INSTANCE, setAxiosInterceptors} from 'helpers/axiosService';
-import LocalizationContext from 'translation/context';
-import {useToast} from 'react-native-styled-toast';
+// import {AXIOS_INSTANCE, setAxiosInterceptors} from 'helpers/axiosService';
+// import LocalizationContext from 'translation/context';
+// import {useToast} from 'react-native-styled-toast';
 
-import Home from 'screens/Home';
-import {useSelector} from 'react-redux';
-import {RootState} from 'store/reducers';
+// import {useSelector} from 'react-redux';
+// import {RootState} from 'store/reducers';
+
+import Characters from 'screens/Characters';
 
 let navigationTheme = {
   ...DefaultTheme,
@@ -24,17 +25,17 @@ let navigationTheme = {
 const Stack = createStackNavigator();
 
 let Router = () => {
-  let {token} = useSelector((state: RootState) => state.user);
-  const {toast} = useToast();
-  let {t} = useContext(LocalizationContext);
+  // let {token} = useSelector((state: RootState) => state.user);
+  // const {toast} = useToast();
+  // let {t} = useContext(LocalizationContext);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    AXIOS_INSTANCE.defaults.headers = {Authorization: `Bearer ${token}`};
-  }, [token]);
+  // useEffect(() => {
+  // AXIOS_INSTANCE.defaults.headers = {Authorization: `Bearer ${token}`};
+  // }, [token]);
 
   useEffect(() => {
-    setAxiosInterceptors(toast, t);
+    // setAxiosInterceptors(toast, t);
     setLoaded(true);
   }, []);
 
@@ -42,7 +43,7 @@ let Router = () => {
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Group>
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Characters" component={Characters} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
